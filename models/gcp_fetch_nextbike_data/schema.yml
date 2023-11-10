@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: nextbike-404713
+    description: raw data from nextbike api
+    database: nextbike-404713
+    schema: nextbike
+    tables:
+      - name: Live
+        description: 'nextbike api data'
