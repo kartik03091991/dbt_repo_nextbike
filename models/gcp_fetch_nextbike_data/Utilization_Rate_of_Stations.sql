@@ -11,4 +11,4 @@ WITH raw_data AS (
 
 SELECT *
 FROM raw_data
-LIMIT 1000;
+LIMIT 1000
