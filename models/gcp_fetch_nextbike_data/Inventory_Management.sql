@@ -13,4 +13,4 @@ WITH filtered_bike_data AS (
 )
 
 SELECT *
-FROM filtered_bike_data;
+FROM filtered_bike_data
