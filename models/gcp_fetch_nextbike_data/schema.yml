@@ -6,9 +6,9 @@ sources:
     database: nextbike-404713
     schema: nextbike
     tables:
-      - name: Live
+      - name: Live3
         description: 'nextbike api data'
-  - name: nextbike-404713
+  - name: nextbike-404713_d
     description: raw data from nextbike api
     database: nextbike-404713
     schema: nextbike
