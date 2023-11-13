@@ -26,4 +26,4 @@ SELECT
 FROM
   CombinedData
 GROUP BY
-  weather_description;
+  weather_description
