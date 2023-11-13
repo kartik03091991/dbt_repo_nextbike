@@ -8,7 +8,5 @@ sources:
     tables:
       - name: Live3
         description: 'nextbike api data'
-      - name: Weather_Data
-        description: 'nextbike api data'
       - name: Weather_Data  # Add the new table here
         description: 'weather data'
