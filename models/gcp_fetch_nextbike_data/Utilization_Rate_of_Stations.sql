@@ -6,7 +6,7 @@ WITH raw_data AS (
         station_name,
         CAST(station_booked_bikes AS FLOAT64) / NULLIF(station_bikes, 0) AS utilization_rate
     FROM
-        `nextbike-404713.nextbike.Live`
+        `nextbike-404713.nextbike.Live3`
 )
 
 SELECT *

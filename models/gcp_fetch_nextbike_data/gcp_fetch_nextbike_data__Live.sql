@@ -1,5 +1,5 @@
 with source_Live as (
-    select * from {{ source('nextbike-404713', 'Live') }}
+    select * from {{ source('nextbike-404713', 'Live3') }}
 ),
 
 final as (
