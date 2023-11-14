@@ -1,14 +1,14 @@
 WITH filtered_bike_data AS (
     SELECT
         b.station_name,
-        AVG(b.available_bikes) as avg_available_bikes,
-        AVG(b.bike_racks - b.available_bikes) as avg_rack_shortage
+        AVG(b.station_bikes) as avg_available_bikes,
+        AVG(b.station_bikes - b.bike_racks ) as avg_rack_shortage
     FROM
         `nextbike-404713.nextbike.Live3` b
     JOIN
         `nextbike-404713.nextbike.Weather_Data` w ON LOWER(b.city_name) = LOWER(w.City_Name)
     WHERE
-        w.temp > 15 AND w.prcp = 0
+        w.temp > 5 AND w.prcp = 0
     GROUP BY
         b.station_name
 
@@ -22,4 +22,5 @@ FROM
     filtered_bike_data
 WHERE 
     avg_rack_shortage > 5
+ORDER BY avg_rack_shortage DESC
 
