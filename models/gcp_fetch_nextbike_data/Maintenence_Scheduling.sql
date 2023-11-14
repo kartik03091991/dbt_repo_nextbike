@@ -1,6 +1,7 @@
 WITH filtered_bike_data AS (
     SELECT
         DISTINCT b.city_name,
+        b.station_name,
         b.city_booked_bikes,
         w.rhum
     FROM
@@ -13,10 +14,12 @@ WITH filtered_bike_data AS (
 
 SELECT
     city_name,
+    station_name,
     SUM(city_booked_bikes) as total_booked,
     AVG(rhum) as average_humidity
 FROM
     filtered_bike_data
 GROUP BY
-    city_name
+    city_name,
+    station_name
 ORDER BY average_humidity DESC
