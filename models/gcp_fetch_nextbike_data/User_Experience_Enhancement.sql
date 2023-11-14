@@ -7,7 +7,7 @@ WITH filtered_bike_data AS (
     FROM
         `nextbike-404713.nextbike.Live3` b
     JOIN
-        `nextbike-404713.nextbike.Weather_Data` w ON b.city_name = w.City_Name
+        `nextbike-404713.nextbike.Weather_Data` w ON LOWER(b.city_name) = LOWER(w.City_Name)
 
 )
 
