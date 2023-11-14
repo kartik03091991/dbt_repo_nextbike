@@ -14,7 +14,7 @@ WITH filtered_bike_data AS (
 SELECT
     city_name,
     station_name,
-    SUM(booked_bikes) as total_booked,
+    AVG(booked_bikes) as total_booked,
     AVG(rhum) as average_humidity
 FROM
     filtered_bike_data
