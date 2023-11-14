@@ -17,6 +17,6 @@ SELECT
     SUM(booked_bikes) as total_booked,
     AVG(rhum) as average_humidity
 FROM
-    {{ ref('filtered_bike_data') }}
+    filtered_bike_data
 GROUP BY
     city_name, station_name
