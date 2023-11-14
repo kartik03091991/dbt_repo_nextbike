@@ -21,8 +21,7 @@ distinct_next_bike_data AS (
         special_racks,
         free_special_racks,
         country_code,
-        country_name,
-        station_number
+        country_name
     FROM `nextbike-404713.nextbike.Live3`
 )
  
