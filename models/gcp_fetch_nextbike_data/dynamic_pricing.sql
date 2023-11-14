@@ -19,8 +19,8 @@ SELECT
   weather_description ,
   AVG(booked_bikes) AS avg_booked_bikes,
   CASE
-    WHEN AVG(booked_bikes) > 50 THEN 'High Demand - Increase Price'
-    WHEN AVG(booked_bikes) <= 20 THEN 'Low Demand - Decrease Price'
+    WHEN AVG(booked_bikes) >= 5 THEN 'High Demand - Increase Price'
+    WHEN AVG(booked_bikes) < 5 THEN 'Low Demand - Decrease Price'
     ELSE 'Normal Demand'
   END AS pricing_strategy
 FROM
