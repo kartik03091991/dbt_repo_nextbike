@@ -9,6 +9,7 @@ distinct_next_bike_data AS (
     SELECT
         DISTINCT (station_number),
         city_name,
+        station_name,
         num_places,
         city_booked_bikes,
         city_set_point_bikes,
